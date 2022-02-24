@@ -14,36 +14,36 @@ import { useNavigate } from "react-router-dom";
 const Checkout = (props) => {
     const navigate = useNavigate();
 
-    const initValues = { cardname: "", cardnumber: "", expiration_date: "", expiration_year: "", cvc: "" };
-    const [formValues, setformValues] = useState(initValues);
-    const [formErrors, setformErrors] = useState({});
-    const [isSubmit, setisSubmit] = useState(false);
+    const initValues1 = { cardname: "", cardnumber: "", expiration_date: "", expiration_year: "", cvc: "" };
+    const [formValues1, setformValues1] = useState(initValues1);
+    const [formErrors1, setformErrors1] = useState({});
+    const [isSubmit1, setisSubmit1] = useState(false);
 
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setformValues({ ...formValues, [name]: value });
+        setformValues1({ ...formValues1, [name]: value });
         //console.log(formValues);
 
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        setformErrors(validate(formValues));
-        setisSubmit(true);
-        console.log(formValues);
+        setformErrors1(validate(formValues1));
+        setisSubmit1(true);
+        console.log(formValues1);
 
 
     };
 
     useEffect(() => {
-        console.log(formErrors);
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
-            console.log(formValues);
+        console.log(formErrors1);
+        if (Object.keys(formErrors1).length === 0 && isSubmit1) {
+            console.log(formValues1);
             alert("Order Placed");
 
         }
 
-    }, [formErrors]);
+    }, [formErrors1]);
     const validate = (values) => {
         const errors = {};
         if (!values.cardname) {
@@ -93,23 +93,23 @@ const Checkout = (props) => {
                                             <div className="col-md-12">
                                                 <div className="form-group mb-3">
                                                     <label>Name on Card </label>
-                                                    <input type='text' name='cardname' className="form-control" value={formValues.cardname} onChange={handleChange} />
+                                                    <input type='text' name='cardname' className="form-control" value={formValues1.cardname} onChange={handleChange} />
                                                 </div>
-                                                <p className="errormsg"> {formErrors.cardname}</p>
+                                                <p className="errormsg"> {formErrors1.cardname}</p>
                                                 <div className="form-group mb-3">
                                                     <label>Card Number </label>
-                                                    <input type='text' name='cardnumber' className="form-control" value={formValues.cardnumber} onChange={handleChange} />
+                                                    <input type='text' name='cardnumber' className="form-control" value={formValues1.cardnumber} onChange={handleChange} />
                                                 </div>
-                                                <p className="errormsg"> {formErrors.cardnumber}</p>
+                                                <p className="errormsg"> {formErrors1.cardnumber}</p>
                                             </div>
                                             <div className="col-md-2">
                                                 <div className="form-group mb-3">
                                                     <label>Expiration </label>
 
-                                                    <input type='text' name='expiration_date' className="form-control" value={formValues.expiration_date} onChange={handleChange} />
+                                                    <input type='text' name='expiration_date' className="form-control" value={formValues1.expiration_date} onChange={handleChange} />
 
                                                 </div>
-                                                <p className="errormsg"> {formErrors.expiration_date}</p>
+                                                <p className="errormsg"> {formErrors1.expiration_date}</p>
 
                                             </div>
                                             <div className="col-md-1">
@@ -124,9 +124,9 @@ const Checkout = (props) => {
                                                 <div className="form-group mb-3">
                                                     <label></label>
 
-                                                    <input type='text' name='expiration_year' className="form-control" value={formValues.expiration_year} onChange={handleChange} />
+                                                    <input type='text' name='expiration_year' className="form-control" value={formValues1.expiration_year} onChange={handleChange} />
                                                 </div>
-                                                <p className="errormsg"> {formErrors.expiration_year}</p>
+                                                <p className="errormsg"> {formErrors1.expiration_year}</p>
 
                                             </div>
 
@@ -134,11 +134,11 @@ const Checkout = (props) => {
                                                 <div className="form-group mb-3">
                                                     <label>CVC </label>
 
-                                                    <input type='text' name='cvc' className="form-control" value={formValues.cvc} onChange={handleChange} />
+                                                    <input type='text' name='cvc' className="form-control" value={formValues1.cvc} onChange={handleChange} />
 
 
                                                 </div>
-                                                <p className="errormsg"> {formErrors.cvc}</p>
+                                                <p className="errormsg"> {formErrors1.cvc}</p>
 
                                             </div>
                                             <hr />

@@ -20,6 +20,7 @@ const Landing = (props) => {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setformValues({ ...formValues, [name]: value });
+        setisSubmit(false);
         //console.log(formValues);
 
     };
@@ -28,9 +29,7 @@ const Landing = (props) => {
         setformErrors(validate(formValues));
         setisSubmit(true);
         console.log(formValues);
-        if (isSubmit) {
-            navigate("checkout");
-        }
+
 
     };
 
@@ -59,6 +58,9 @@ const Landing = (props) => {
 
 
     };
+    if (isSubmit && Object.keys(formErrors).length === 0) {
+        navigate("checkout");
+    }
 
     return (
 
