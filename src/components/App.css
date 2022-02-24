@@ -1,0 +1,91 @@
+.cardhead{
+    margin-top: 40px;
+  }
+
+.card-header{
+    background-color: rgb(242, 248, 248);
+}
+.card-body{
+    background-color: rgb(242, 248, 248);
+
+}
+.product-img{
+    width:100%;
+    height: 80%;
+}
+
+.btnback{
+    margin-right: 10% !important;
+
+
+}
+.ll{
+    display: block;
+}
+.errormsg{
+    color: red;
+}
+.cc{
+    color: green;
+}
+.button{
+    background-color: grey;
+}
+
+
+button {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    touch-action: manipulation;
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  
+  .qty {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .qty label {
+    flex: 1 0 100%;
+  }
+  .qty input {
+    width: 2rem;
+    background-color: rgb(242, 248, 248);
+    height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid rgb(242, 248, 248);
+  }
+  .qty button {
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    font-size: 1rem;
+    background: #575757;
+  }
+  .qty button.qtyminus {
+    margin-right: 0.3rem;
+  }
+  .qty button.qtyplus {
+    margin-left: 0.3rem;
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.bread{
+    color:blue;
+}
